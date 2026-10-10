@@ -1,0 +1,22 @@
+/* Hero entrance — subtle upward fade, respects prefers-reduced-motion */
+@keyframes atelier-up {
+  to { opacity: 1; transform: none; }
+}
+
+.atelier-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: atelier-up .9s cubic-bezier(.2, .7, .2, 1) forwards;
+}
+
+.atelier-up.delay-1 { animation-delay: .16s; }
+.atelier-up.delay-2 { animation-delay: .34s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .atelier-up {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "knitwear",
+    "name": "Knitwear",
+    "description": "T-shirts, polos, fleece, sweatshirts and loungewear. Cotton, cotton-poly, French terry and rib from approved mills — a custom t-shirt factory Vietnam brands use as a bulk polo shirt manufacturer for retail programmes.",
+    "tag": "Cut & sew"
+  },
+  {
+    "id": "woven",
+    "name": "Woven",
+    "description": "Shirts, blouses, dresses, chinos and shorts in poplin, twill, linen blends and viscose. A woven pants supplier Vietnam teams use for both direct-to-consumer and department-store programmes.",
+    "tag": "Cut & sew"
+  },
+  {
+    "id": "outerwear",
+    "name": "Outerwear",
+    "description": "Padded jackets, wool and felt coats, vests. Down and synthetic fill with DWR finishes — a waterproof jacket manufacturer working in taped-seam construction.",
+    "tag": "Seasonal"
+  },
+  {
+    "id": "kidswear",
+    "name": "Kidswear",
+    "description": "Full range for 2–14 years, produced to CPSIA and EN 14682 drawstring requirements. Knit dress manufacturer for kids programmes and school uniform runs.",
+    "tag": "Compliance-checked"
+  },
+  {
+    "id": "protective",
+    "name": "Protective & workwear",
+    "description": "Hi-vis, coveralls and uniform programs with reinforced construction. FOB sportswear manufacturer Vietnam with AQL inspection on every run.",
+    "tag": "Program orders"
+  },
+  {
+    "id": "accessories",
+    "name": "Accessories",
+    "description": "Socks, underwear and basics through certified partner mills, sourced alongside the main garment package.",
+    "tag": "Partner mills"
+  }
+]

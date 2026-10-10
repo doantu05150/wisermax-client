@@ -1,0 +1,7 @@
+[
+  { "n": "01", "title": "Tech pack review", "description": "We check construction, measurements and fabric spec, then return a costing and open questions.", "duration": "3–5 days" },
+  { "n": "02", "title": "Sampling", "description": "Proto, fit and pre-production samples from our in-house sample room. Fabric sourced from approved mills.", "duration": "2–3 weeks" },
+  { "n": "03", "title": "Bulk production", "description": "Allocated to the partner factory best suited to the product. Weekly progress photos and line reports.", "duration": "30–45 days" },
+  { "n": "04", "title": "Inspection", "description": "Inline and final inspection to AQL 1.0 or 2.5. Third-party inspection welcome.", "duration": "2–3 days" },
+  { "n": "05", "title": "Packing & shipping", "description": "Packed to your carton and labelling spec. FOB Hai Phong or door-to-door via forwarder.", "duration": "Sea 25–35 days to US West Coast" }
+]

@@ -1,0 +1,21 @@
+/* ============================================
+   Wisermax HN — design tokens (A · Editorial)
+   Single source of truth for the CSS custom properties.
+   Loaded before global.scss in nuxt.config.ts.
+   ============================================ */
+
+:root {
+  --paper:    #FBFAF7;   /* bleached cotton — main background */
+  --muslin:   #EFEBE3;   /* raw undyed — image placeholders, alt panels */
+  --thread:   #676B66;   /* grey thread — secondary text, captions (darkened from the
+                            brief's #8B8F8A, which fails WCAG AA at 3.15:1) */
+  --ink:      #1B1E23;   /* deep ink — body text */
+  --indigo:   #22385C;   /* rope-dyed denim — primary brand, buttons, quality band */
+  --selvedge: #C1352E;   /* the red selvedge line — structural accent only */
+  --rule:     #D9D4C9;   /* dividers */
+
+  --f: "Archivo", system-ui, sans-serif;
+  --maxw: 1320px;
+  --gutter: clamp(20px, 4vw, 56px);
+}
+

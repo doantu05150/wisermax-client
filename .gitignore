@@ -88,3 +88,13 @@ sw.*
 
 # Vim swap files
 *.swp
+
+.vercel
+
+# Nuxt 3
+.output
+.data
+.nitro
+
+# Local Claude Code tooling (preview launch config)
+.claude/

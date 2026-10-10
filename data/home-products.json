@@ -1,0 +1,38 @@
+[
+  {
+    "id": "men",
+    "title": "Men",
+    "blurb": "Shirts, tees, chinos, jackets",
+    "url": "/products/men",
+    "linkLabel": "View men's",
+    "image": "/home/product_overview_men.jpeg",
+    "alt": "Men's shirts and chinos on the line — cut and sew manufacturer Vietnam producing woven and knit menswear"
+  },
+  {
+    "id": "women",
+    "title": "Women",
+    "blurb": "Dresses, blouses, coats, knits",
+    "url": "/products/women",
+    "linkLabel": "View women's",
+    "image": "/home/product_overview_women.jpeg",
+    "alt": "Women's dresses and blouses in production — knit dress manufacturer and woven blouse supplier in Vietnam"
+  },
+  {
+    "id": "kids",
+    "title": "Kids",
+    "blurb": "Ages 2–14, all categories",
+    "url": "/products/kids",
+    "linkLabel": "View kids'",
+    "image": "/home/product_overview_kid.png",
+    "alt": "Kidswear programme for ages 2 to 14 — garment factory in Vietnam producing to CPSIA and EN 14682"
+  },
+  {
+    "id": "protective",
+    "title": "Protective & accessories",
+    "blurb": "Workwear, socks, underwear",
+    "url": "/products",
+    "linkLabel": "View range",
+    "image": "/home/product_overview_protective.jpg",
+    "alt": "Protective workwear and hi-vis coveralls — FOB sportswear manufacturer Vietnam with AQL inspection"
+  }
+]

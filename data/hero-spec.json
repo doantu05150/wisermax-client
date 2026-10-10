@@ -1,0 +1,7 @@
+[
+  { "term": "Monthly capacity", "value": "600,000", "unit": "pcs" },
+  { "term": "Bulk lead time", "value": "45–60", "unit": "days" },
+  { "term": "Minimum order", "value": "500", "unit": "pcs / style" },
+  { "term": "Inspection standard", "value": "AQL 1.0 – 2.5", "unit": null },
+  { "term": "Shipping to", "value": "US · Canada · EU · Korea", "unit": null }
+]

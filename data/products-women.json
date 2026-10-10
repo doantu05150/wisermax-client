@@ -1,0 +1,65 @@
+{
+  "slug": "women",
+  "kicker": "Womenswear · Pl. I · II · III",
+  "title": "Women's",
+  "titleAccent": "programme",
+  "titleSuffix": ".",
+  "lede": "Knit dress manufacturer Vietnam, woven blouses and shirting, tailored coats and vests, activewear, sleepwear and swim. Every category run through one merchandising desk in Hanoi.",
+  "hero": "/products/women/banner.jpeg",
+  "heroAlt": "Womenswear programme — Vietnam clothing manufacturer for knit dresses, blouses, coats and activewear",
+  "specs": [
+    { "term": "Categories",     "value": "Dresses · Blouses · Skirts · Knit wear · Coats · Activewear · Sleepwear · Swim · Underwear" },
+    { "term": "Typical fabrics","value": "Cotton jersey · Rib · Viscose · Linen blends · Wool · Softshell" },
+    { "term": "Monthly capacity","value": "Up to 250,000 pcs across knit, woven and outerwear" },
+    { "term": "MOQ",            "value": "500 pcs / style · colour splits from 200" }
+  ],
+  "features": [
+    {
+      "code": "P / 01",
+      "title": "Knit dresses & tops",
+      "description": "Knit dress manufacturer Vietnam. Jersey, rib and interlock in solids, stripes and yarn-dye. Fit blocks kept for repeat programmes so a re-order lands on grade.",
+      "images": [
+        { "src": "/products/women/banner_vay_dai.png", "alt": "Women's knit dress — Vietnam knit dress manufacturer" }
+      ]
+    },
+    {
+      "code": "P / 02",
+      "title": "Blouses & tailored vests",
+      "description": "Cut and sew blouses in viscose, silk-touch and linen blends. Tailored vests and jackets sampled to buyer measurement charts.",
+      "images": [
+        { "src": "/products/women/banner_vest.png", "alt": "Women's tailored vest — Vietnam garment factory sample" }
+      ]
+    },
+    {
+      "code": "P / 03",
+      "title": "Overcoats & outerwear",
+      "description": "Polyester, wool and viscose blends. Felt fabric coats hold warmth and shape through a season; fleece vests engineered for dry-clean handling. Structured piece work with hand finishing.",
+      "images": [
+        { "src": "/products/women/mangto_1.jpg", "alt": "Women's wool overcoat — Vietnam outerwear factory" },
+        { "src": "/products/women/mangto_2.jpg", "alt": "Structured women's coat — Vietnam apparel manufacturer" },
+        { "src": "/products/women/mangto_3.png", "alt": "Women's felt coat — Vietnam clothing manufacturer" },
+        { "src": "/products/women/mangto_4.jpg", "alt": "Women's fleece vest — Vietnam outerwear supplier" }
+      ]
+    },
+    {
+      "code": "P / 04",
+      "title": "Activewear, sleepwear & swim",
+      "description": "Workout, pyjama, swim and underwear categories run on dedicated lines with AQL inspection. Elastic, gusseting and stretch tests included in QA.",
+      "images": [
+        { "src": "/products/women/dl_1.png", "alt": "Women's activewear — Vietnam sportswear manufacturer" },
+        { "src": "/products/women/dl_2.png", "alt": "Women's pyjama — Vietnam apparel manufacturer" },
+        { "src": "/products/women/dl_3.png", "alt": "Women's swimsuit — Vietnam swimwear manufacturer" },
+        { "src": "/products/women/dl_4.png", "alt": "Women's underwear — Vietnam clothing supplier" }
+      ]
+    },
+    {
+      "code": "P / 05",
+      "title": "Fashion dresses",
+      "description": "Occasion and everyday dressing — from lightweight cotton dresses to structured event pieces. Sampled with the merchandiser present so fit and drape land in the first proto.",
+      "images": [
+        { "src": "/products/women/banner_dam_2.png", "alt": "Women's fashion dress — Vietnam garment manufacturer for US and EU brands" }
+      ]
+    }
+  ],
+  "more": []
+}

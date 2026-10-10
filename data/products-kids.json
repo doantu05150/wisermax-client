@@ -1,0 +1,49 @@
+{
+  "slug": "kids",
+  "kicker": "Kidswear · Pl. IV",
+  "title": "Kids'",
+  "titleAccent": "programme",
+  "titleSuffix": ".",
+  "lede": "Kidswear factory Vietnam ages 2–14. Baby zip sleepsuits, boys' and girls' full ranges — sampled to CPSIA and EN 14682, inspected AQL before packing.",
+  "hero": "/products/kids/banner_top.png",
+  "heroAlt": "Kidswear programme — Vietnam kids' clothing manufacturer sampled to CPSIA and EN 14682",
+  "specs": [
+    { "term": "Age range",       "value": "0–24 mo · 2–14 yr" },
+    { "term": "Compliance",      "value": "CPSIA · EN 14682 · REACH on request" },
+    { "term": "Typical fabrics", "value": "Organic cotton · Interlock · Poplin · Fleece · Waterproof shell" },
+    { "term": "MOQ",             "value": "1,000 pcs / style" }
+  ],
+  "features": [
+    {
+      "code": "P / 01",
+      "title": "Baby zip sleepsuits",
+      "description": "Hearts clever-zip sleepsuits for newborns and infants. Anti-scratch mittens on request, gentle enzyme wash to soften cotton before packing.",
+      "images": [
+        { "src": "/products/kids/baby_1.jpeg", "alt": "Baby zip sleepsuit — Vietnam kids' clothing manufacturer" }
+      ]
+    },
+    {
+      "code": "P / 02",
+      "title": "Boys' full range",
+      "description": "T-shirts, polos, shirts, shorts, chinos, hoodies and outerwear. Drawstring rules per EN 14682 applied at sampling; snaps and buttons pull-tested.",
+      "images": [
+        { "src": "/products/kids/boy_1.jpeg", "alt": "Boys' t-shirt — Vietnam kidswear manufacturer" },
+        { "src": "/products/kids/boy_2.jpeg", "alt": "Boys' shirt — Vietnam garment factory for kids" },
+        { "src": "/products/kids/boy_3.jpeg", "alt": "Boys' shorts — Vietnam kidswear supplier" },
+        { "src": "/products/kids/boy_4.jpeg", "alt": "Boys' outerwear — Vietnam kids' clothing manufacturer" }
+      ]
+    },
+    {
+      "code": "P / 03",
+      "title": "Girls' full range",
+      "description": "Dresses, tops, skirts, leggings, cardigans and outerwear. Print and embroidery in-house; sequins and trims audited for choking hazard.",
+      "images": [
+        { "src": "/products/kids/girl_1.jpeg", "alt": "Girls' dress — Vietnam kidswear manufacturer" },
+        { "src": "/products/kids/girl_2.jpeg", "alt": "Girls' top — Vietnam kids' clothing supplier" },
+        { "src": "/products/kids/girl_3.jpeg", "alt": "Girls' skirt — Vietnam garment factory for kids" },
+        { "src": "/products/kids/girl_4.jpeg", "alt": "Girls' outerwear — Vietnam kidswear manufacturer" }
+      ]
+    }
+  ],
+  "more": []
+}

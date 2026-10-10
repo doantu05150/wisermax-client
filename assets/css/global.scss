@@ -1,0 +1,253 @@
+/* ============================================
+   Wisermax HN — global styles (A · Editorial)
+   Design tokens live in tokens.css, loaded first.
+   ============================================ */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+:focus-visible {
+  outline: 2px solid var(--selvedge);
+  outline-offset: 3px;
+}
+
+/* ---------- layout primitives ---------- */
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* The selvedge line — one red thread down the left edge of every band.
+   Global on purpose: every section inherits it without opting in. */
+.band {
+  position: relative;
+  padding: clamp(64px, 9vw, 128px) 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* The thread sits 10px to the left of the text column. The reference measures
+   that from the viewport edge, which only holds while the viewport is narrower
+   than --maxw; past that .wrap picks up a centring margin the thread ignored,
+   and by 1920 it stranded the thread ~300px from the text. Adding the centring
+   margin back keeps the 10px relationship at every width, and the max() leaves
+   narrow viewports exactly where the reference put them. */
+.band::before {
+  content: "";
+  position: absolute;
+  /* max() stays outside calc(): the CSS minifier cannot parse a comma-separated
+     function nested inside calc(). */
+  left: max(calc(var(--gutter) - 10px), calc((100% - var(--maxw)) / 2 + var(--gutter) - 10px));
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--selvedge);
+  opacity: .9;
+}
+
+/* On the indigo quality band the thread flips to white. */
+.band.indigo::before {
+  background: #fff;
+  opacity: .5;
+}
+
+/* ---------- typography ---------- */
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--f);
+  color: var(--ink);
+}
+
+.display {
+  font-weight: 500;
+  font-stretch: 78%;
+  font-size: clamp(44px, 7.2vw, 108px);
+  line-height: .94;
+  letter-spacing: -.025em;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 500;
+  font-stretch: 82%;
+  font-size: clamp(32px, 4.2vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.lede {
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.45;
+  max-width: 34em;
+  color: #3a3e44;
+  margin: 0;
+}
+
+.small { font-size: 14px; color: var(--thread); }
+
+/* Labels and client names sit at the extended end of the width axis. */
+.wide {
+  font-stretch: 112%;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.kicker {
+  font: 600 11px/1 var(--f);
+  font-stretch: 112%;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--thread);
+}
+
+.rule { height: 1px; background: var(--ink); margin: 0; }
+.hair { height: 1px; background: var(--rule); margin: 0; }
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  font-family: var(--f);
+  font-weight: 600;
+  font-size: 15px;
+  background: var(--indigo);
+  color: #fff;
+  border: 1px solid var(--indigo);
+  border-radius: 2px;
+  transition: background .15s, color .15s, border-color .15s;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover { background: #1a2c4a; border-color: #1a2c4a; color: #fff; }
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+
+  &:hover { background: var(--ink); color: #fff; }
+}
+
+.btn.sm { padding: 10px 16px; font-size: 14px; }
+
+/* ---------- shared section primitives ---------- */
+
+/* Two-column section split: title/lede left, content right. */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+
+  .lede { max-width: none; }
+}
+
+/* A ruled list, not cards — name / description / tag. */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+
+  li {
+    display: grid;
+    grid-template-columns: minmax(200px, .6fr) 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  li strong { font-weight: 600; font-size: 20px; font-stretch: 90%; }
+  li p { margin: 0; color: #3a3e44; }
+  li span { font-size: 14px; color: var(--thread); white-space: nowrap; }
+}
+
+.list.two li { grid-template-columns: minmax(160px, .45fr) 1fr; }
+
+/* Photo panel. Empty panels still read as fabric via a twill weave. */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: var(--muslin);
+
+  img { width: 100%; height: 100%; object-fit: cover; }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(135deg, rgba(27, 30, 35, .045) 0 2px, transparent 2px 6px);
+  }
+
+  &:has(img)::after { display: none; }
+}
+
+.ph.dark { background-color: var(--indigo); }
+
+.ph.dark::after {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, .06) 0 2px, transparent 2px 6px);
+}
+
+.ph .cap {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  z-index: 1;
+  font-size: 13px;
+  color: #fff;
+  background: rgba(27, 30, 35, .7);
+  padding: 6px 10px;
+  border-radius: 2px;
+}
+
+@media (max-width: 820px) {
+  .split { grid-template-columns: 1fr; }
+  .list li { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* ---------- misc utilities kept for reuse ---------- */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.uppercase { text-transform: uppercase; }
+.relative { position: relative; }
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.flex { display: flex; }
+.centeral { display: flex; align-items: center; justify-content: center; }
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-center { justify-content: center; }
+
+.space-no-wrap { white-space: nowrap; }

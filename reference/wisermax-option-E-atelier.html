@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WISERMAX HN — Garment manufacturer &amp; ODM atelier, Hanoi</title>
+<meta name="description" content="A garment atelier in Hanoi producing knitwear, woven, outerwear and sportswear for US and EU brands. Full package OEM, ODM and private label — FOB Hai Phong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F1E6;              /* bone / undyed linen */
+    --paper-2:#EFE9D8;
+    --card:#FBF7EC;
+    --ink:#231F1A;                /* warm ink */
+    --mute:#7A7368;
+    --rule:rgba(35,31,26,.14);
+    --hair:rgba(35,31,26,.09);
+    --rust:#B7532F;               /* natural pigment */
+    --sage:#7A886C;
+    --serif:"Newsreader", "Times New Roman", serif;
+    --sans:"Inter", system-ui, sans-serif;
+    --g:clamp(24px,4.5vw,80px);
+    --maxw:1320px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  a{color:inherit; text-decoration:none}
+  img{display:block; max-width:100%}
+  :focus-visible{outline:2px solid var(--rust); outline-offset:3px}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--g)}
+  .band{padding:clamp(80px,10vw,144px) 0}
+  .band + .band{border-top:1px solid var(--hair)}
+
+  h1,h2,h3{margin:0; font-family:var(--serif); font-weight:400; letter-spacing:-.015em}
+  em{font-family:var(--serif); font-style:italic; font-weight:400}
+
+  .kicker{font:600 11px/1 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--mute)}
+  .rule{height:1px; background:var(--ink); margin:0}
+  .hair{height:1px; background:var(--rule); margin:0}
+
+  /* header */
+  header{position:sticky; top:0; z-index:20; background:rgba(245,241,230,.92); border-bottom:1px solid var(--hair); backdrop-filter:blur(10px)}
+  .nav{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; height:72px; gap:24px}
+  .brand{display:flex; align-items:baseline; gap:10px; font-family:var(--serif); font-weight:500; font-size:19px; letter-spacing:.02em}
+  .brand small{color:var(--mute); font-family:var(--sans); font-weight:400; font-size:12px; letter-spacing:.06em}
+  .nav ul{display:flex; gap:32px; list-style:none; margin:0; padding:0; font-size:14px; color:#4a443c; justify-content:center}
+  .nav ul a{padding-bottom:2px; border-bottom:1px solid transparent}
+  .nav ul a:hover{color:var(--ink); border-bottom-color:var(--ink)}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 22px; font:600 13.5px/1 var(--sans); background:var(--ink); color:var(--paper); border:1px solid var(--ink); border-radius:0; transition:all .15s; justify-self:end}
+  .btn:hover{background:var(--rust); border-color:var(--rust)}
+  .btn.ghost{background:transparent; color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink); color:var(--paper)}
+  .btn.rust{background:var(--rust); border-color:var(--rust); color:var(--paper)}
+  .btn.rust:hover{background:transparent; color:var(--rust)}
+
+  /* HERO */
+  .hero{padding-top:clamp(56px,7vw,96px); padding-bottom:clamp(56px,7vw,96px)}
+  .hero-meta{display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rule); font:500 12px/1 var(--sans); color:var(--mute); letter-spacing:.06em; flex-wrap:wrap; gap:16px}
+  .hero-meta span b{color:var(--ink); font-weight:600; margin-right:4px}
+  .hero-meta em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--ink); letter-spacing:0}
+
+  .hero h1{font-size:clamp(56px,8.4vw,132px); line-height:.94; margin:clamp(56px,7vw,96px) 0 0; max-width:16ch; font-weight:400; font-variation-settings:"opsz" 72}
+  .hero h1 em{color:var(--rust)}
+  .hero .layout{display:grid; grid-template-columns:1.4fr .9fr; gap:clamp(32px,5vw,72px); align-items:end; margin-top:clamp(48px,6vw,80px)}
+  .hero .lede{font-family:var(--serif); font-weight:400; font-size:clamp(20px,1.9vw,26px); line-height:1.4; color:#3a352e; margin:0; max-width:32ch; font-variation-settings:"opsz" 36}
+  .hero .cta{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+
+  /* PHOTO PLATE */
+  .plate{padding:0 0 clamp(56px,7vw,96px)}
+  .plate .wrap{position:relative}
+  .plate .shot{aspect-ratio:16/9; background:var(--paper-2) center/cover no-repeat; position:relative}
+  .plate .caption{margin-top:20px; display:grid; grid-template-columns:1fr auto 1fr; gap:24px; align-items:center; font:500 12px/1.4 var(--sans); color:var(--mute); letter-spacing:.02em; padding-top:14px; border-top:1px solid var(--rule)}
+  .plate .caption b{color:var(--ink); font-weight:600}
+  .plate .caption .mid{font-family:var(--serif); font-style:italic; font-size:14px; color:var(--ink); font-weight:400; text-align:center; letter-spacing:0}
+  .plate .caption .r{text-align:right}
+
+  /* MANIFESTO */
+  .manifesto{padding:clamp(80px,10vw,144px) 0; text-align:center; border-top:1px solid var(--hair); border-bottom:1px solid var(--hair)}
+  .manifesto .kicker{margin-bottom:36px}
+  .manifesto p{font-family:var(--serif); font-weight:400; font-size:clamp(28px,3.2vw,44px); line-height:1.28; letter-spacing:-.005em; margin:0 auto; max-width:22ch; font-variation-settings:"opsz" 60}
+  .manifesto p em{color:var(--rust); font-style:italic}
+  .manifesto .sig{margin-top:32px; font-family:var(--serif); font-style:italic; font-size:16px; color:var(--mute)}
+
+  /* SPECIMENS */
+  .specimens .head{display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,64px); align-items:end; margin-bottom:56px}
+  .specimens h2{font-size:clamp(36px,4.4vw,64px); line-height:1; max-width:14ch}
+  .specimens h2 em{color:var(--rust)}
+  .specimens .head p{margin:0; color:#3a352e; font-size:16.5px; max-width:44ch; justify-self:end}
+
+  .plates{display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(28px,4vw,72px)}
+  .card{padding:36px 0; border-top:1px solid var(--rule)}
+  .card:nth-child(-n+2){border-top-color:var(--ink); border-top-width:1.5px}
+  .card-hd{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:24px; font:500 12px/1 var(--sans); color:var(--mute); letter-spacing:.08em; text-transform:uppercase}
+  .card-hd b{font-family:var(--serif); font-style:italic; font-weight:400; font-size:16px; color:var(--ink); text-transform:none; letter-spacing:0}
+  .card .shot{aspect-ratio:4/3; background:var(--paper-2) center/cover no-repeat; margin-bottom:26px}
+  .card h3{font-size:32px; line-height:1.05; margin-bottom:12px; letter-spacing:-.015em}
+  .card h3 em{color:var(--rust)}
+  .card p{margin:0 0 24px; color:#3a352e; font-size:15px; max-width:44ch; line-height:1.6}
+  .card dl{margin:0; padding:0; display:grid; grid-template-columns:auto 1fr; gap:8px 20px; border-top:1px solid var(--rule); padding-top:18px; font-size:13.5px}
+  .card dt{color:var(--mute); font-weight:500; letter-spacing:.02em}
+  .card dd{margin:0; color:var(--ink); font-weight:500}
+  .card dd small{display:block; color:var(--mute); font-weight:400; margin-top:1px; font-family:var(--serif); font-style:italic}
+
+  /* MATERIALS strip */
+  .mats{background:var(--paper-2)}
+  .mats .head{display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(28px,4vw,64px); align-items:end; margin-bottom:48px}
+  .mats h2{font-size:clamp(32px,4vw,54px); line-height:1; max-width:16ch}
+  .mats .head p{margin:0; color:#3a352e; font-size:16px; max-width:48ch; justify-self:end}
+  .mats .strip{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+  .swatch{background:var(--card); border:1px solid var(--hair); overflow:hidden; display:flex; flex-direction:column}
+  .swatch .shot{aspect-ratio:1/1; background:var(--paper-2) center/cover no-repeat}
+  .swatch .body{padding:18px 18px 22px}
+  .swatch .n{font:500 11px/1 var(--sans); letter-spacing:.14em; color:var(--rust); text-transform:uppercase}
+  .swatch h4{font-family:var(--serif); font-weight:400; font-size:21px; margin:8px 0 4px; letter-spacing:-.01em}
+  .swatch p{margin:0; color:var(--mute); font-size:13px; line-height:1.5}
+
+  /* NUMBERS */
+  .figures{padding:clamp(72px,9vw,120px) 0}
+  .figures .kicker{margin-bottom:56px; text-align:center}
+  .figures-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink)}
+  .fig{padding:44px 32px; border-right:1px solid var(--rule); text-align:center}
+  .fig:last-child{border-right:0}
+  .fig b{display:block; font-family:var(--serif); font-weight:300; font-size:clamp(52px,6.4vw,96px); line-height:1; letter-spacing:-.02em; color:var(--ink); font-variation-settings:"opsz" 72}
+  .fig b sup{font-family:var(--sans); font-size:.24em; font-weight:600; letter-spacing:.06em; color:var(--mute); text-transform:uppercase; vertical-align:top; margin-left:6px; padding-top:14px; display:inline-block}
+  .fig .sub{margin-top:20px; font-family:var(--serif); font-style:italic; color:#3a352e; font-size:15px; line-height:1.5; max-width:24ch; margin-left:auto; margin-right:auto}
+
+  /* FOB / LANES */
+  .lanes .head{margin-bottom:48px; display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,64px); align-items:end}
+  .lanes h2{font-size:clamp(36px,4.4vw,64px); line-height:1; max-width:18ch}
+  .lanes h2 em{color:var(--rust)}
+  .lanes .head p{margin:0; color:#3a352e; font-size:16px; max-width:44ch; justify-self:end}
+  .board{border-top:1.5px solid var(--ink)}
+  .board .row{display:grid; grid-template-columns:100px 1.6fr 1fr 1fr 120px; gap:24px; padding:22px 0; border-bottom:1px solid var(--rule); align-items:baseline}
+  .board .row.hd{font:600 11px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--mute); padding:14px 0}
+  .board .row .code{font-family:var(--serif); font-weight:500; font-size:24px; letter-spacing:.03em}
+  .board .row .place{font-weight:500; font-size:16px}
+  .board .row .place small{display:block; color:var(--mute); font-family:var(--serif); font-style:italic; font-weight:400; margin-top:2px; font-size:13.5px}
+  .board .row .via{color:var(--mute); font-size:14px}
+  .board .row .freq{color:var(--mute); font-size:14px}
+  .board .row .days{text-align:right; font-family:var(--serif); font-weight:500; font-size:19px; letter-spacing:-.01em}
+  .board .foot{padding:18px 0 0; font-family:var(--serif); font-style:italic; font-size:14px; color:var(--mute); text-align:center}
+
+  /* CLIENTS */
+  .clients-band{padding:clamp(72px,9vw,120px) 0; text-align:center; background:var(--paper-2)}
+  .clients-band .kicker{margin-bottom:40px}
+  .clients-band ul{display:flex; flex-wrap:wrap; gap:14px 52px; justify-content:center; list-style:none; margin:0; padding:0}
+  .clients-band li{font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(26px,3.4vw,46px); color:var(--ink); line-height:1.1; letter-spacing:-.01em; font-variation-settings:"opsz" 60}
+
+  /* FINAL CTA */
+  .final{padding:clamp(96px,12vw,180px) 0; text-align:center}
+  .final .kicker{margin-bottom:36px}
+  .final h2{font-family:var(--serif); font-weight:400; font-size:clamp(52px,7.4vw,124px); line-height:.98; margin:0 auto 32px; max-width:16ch; font-variation-settings:"opsz" 72}
+  .final h2 em{color:var(--rust)}
+  .final p{margin:0 auto 44px; max-width:44ch; color:#3a352e; font-size:17px}
+  .final .row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+  .final .contact{margin:52px auto 0; max-width:760px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:left; padding-top:36px; border-top:1px solid var(--hair)}
+  .final .contact div b{display:block; font:600 11px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--mute); margin-bottom:10px}
+  .final .contact a{border-bottom:1px solid var(--ink); padding-bottom:1px}
+
+  footer{padding:36px 0 40px; border-top:1px solid var(--hair); font-size:13px; color:var(--mute)}
+  .foot{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
+  .foot ul{display:flex; gap:22px; list-style:none; margin:0; padding:0}
+
+  /* entrance — hero only */
+  .hero-meta, .hero h1, .hero .layout{opacity:0; transform:translateY(16px); animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1{animation-delay:.16s} .hero .layout{animation-delay:.34s}
+  @keyframes up{to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){.hero-meta,.hero h1,.hero .layout{opacity:1; transform:none; animation:none} html{scroll-behavior:auto}}
+
+  @media (max-width:1000px){
+    .nav{grid-template-columns:auto 1fr auto} .nav ul{display:none}
+    .hero .layout{grid-template-columns:1fr}
+    .hero .cta{justify-content:flex-start; margin-top:8px}
+    .plates, .mats .strip, .figures-grid{grid-template-columns:1fr 1fr}
+    .fig{border-right:0; border-bottom:1px solid var(--rule)}
+    .fig:nth-child(2n){border-right:0}
+    .specimens .head, .mats .head, .lanes .head, .plate .caption{grid-template-columns:1fr; text-align:left}
+    .specimens .head p, .mats .head p, .lanes .head p{justify-self:start}
+    .plate .caption .mid, .plate .caption .r{text-align:left}
+    .board .row{grid-template-columns:80px 1fr 90px; gap:14px}
+    .board .row .via, .board .row .freq{display:none}
+    .board .row.hd span:nth-child(3), .board .row.hd span:nth-child(4){display:none}
+    .final .contact{grid-template-columns:1fr}
+    .hero-meta{font-size:11px}
+  }
+  @media (max-width:640px){
+    .mats .strip, .figures-grid, .plates{grid-template-columns:1fr}
+    .fig:last-child{border-bottom:0}
+    .clients-band ul{gap:10px 32px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Wisermax HN <small>Hanoi</small></a>
+    <ul>
+      <li><a href="#specimens">Capabilities</a></li>
+      <li><a href="#materials">Materials</a></li>
+      <li><a href="#figures">By the numbers</a></li>
+      <li><a href="#lanes">FOB &amp; lanes</a></li>
+    </ul>
+    <a class="btn" href="#quote">Request a quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="band hero">
+    <div class="wrap">
+      <div class="hero-meta">
+        <span><b>Est.</b> 2014 <em>·</em> Gia Lam, Hanoi</span>
+        <span><b>Port</b> Hai Phong <em>·</em> 20°52′N, 106°41′E</span>
+        <span><b>Trade</b> OEM <em>·</em> ODM <em>·</em> Private label</span>
+        <span><b>MOQ</b> from 500 pcs</span>
+      </div>
+
+      <h1>A garment <em>atelier</em> in Hanoi, running full package for US and EU brands.</h1>
+
+      <div class="layout">
+        <p class="lede">Cut and sew manufacturer Vietnam. Knitwear, woven, outerwear and sportswear — sampled in our own room, produced across twenty audited factories, shipped FOB Hai Phong.</p>
+        <div class="cta">
+          <a class="btn rust" href="#quote">Send a tech pack</a>
+          <a class="btn ghost" href="#specimens">See capabilities</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO PLATE -->
+  <section class="plate">
+    <div class="wrap">
+      <div class="shot" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/service-1.b4ee9f7.jpg')" aria-hidden="true"></div>
+      <div class="caption">
+        <span><b>Plate&nbsp;I</b> · Cut &amp; sew line, partner factory</span>
+        <span class="mid">Nam Dinh, Northern Vietnam — Autumn 2026</span>
+        <span class="r">1 of 4 · <b>Photograph on file</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="wrap">
+      <div class="kicker">A note from the workshop</div>
+      <p>The garment that <em>ships</em> is the garment you <em>approved</em>. Sampled in our room, sealed under our name on the container.</p>
+      <div class="sig">— Wisermax HN, since 2014</div>
+    </div>
+  </section>
+
+  <!-- SPECIMENS / CAPABILITIES -->
+  <section class="band specimens" id="specimens">
+    <div class="wrap">
+      <div class="head">
+        <h2>Four capability lines. <em>One</em> merchandising desk.</h2>
+        <p>Every category runs on its own dedicated partner factory and QA lead — but everything flows through one merchandiser here in Hanoi. You never chase four vendors.</p>
+      </div>
+
+      <div class="plates">
+
+        <article class="card">
+          <div class="card-hd"><span>Pl. I · Knit</span><b>Knitwear factory</b></div>
+          <div class="shot" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_men.8f5001a.jpeg')"></div>
+          <h3>Custom t-shirts, polos and <em>knit dresses.</em></h3>
+          <p>Cotton jersey, CVC and French terry from approved mills. Bulk polo shirt manufacturer for retail programmes and sweatshirts for DTC labels.</p>
+          <dl>
+            <dt>Monthly capacity</dt><dd>250,000 pcs</dd>
+            <dt>MOQ</dt><dd>500 pcs / style<small>colour splits from 200</small></dd>
+            <dt>Typical fabrics</dt><dd>Cotton, CVC, French terry, rib</dd>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="card-hd"><span>Pl. II · Woven</span><b>Cut &amp; sew woven</b></div>
+          <div class="shot" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_women.34abd18.jpeg')"></div>
+          <h3>Shirts, blouses and <em>woven pants.</em></h3>
+          <p>Woven pants supplier Vietnam. Poplin, oxford, twill, viscose and linen blends. Chinos, shorts, dresses and shirting for both direct-to-consumer and department-store programmes.</p>
+          <dl>
+            <dt>Monthly capacity</dt><dd>200,000 pcs</dd>
+            <dt>MOQ</dt><dd>500 pcs / style</dd>
+            <dt>Typical fabrics</dt><dd>Poplin, twill, viscose, linen blends</dd>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="card-hd"><span>Pl. III · Outerwear</span><b>Jacket manufacturer</b></div>
+          <div class="shot" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_protective.703df30.jpg')"></div>
+          <h3>Padded jackets and <em>waterproof</em> shells.</h3>
+          <p>Waterproof jacket manufacturer with taped-seam construction. Padded and puffer jackets, wool and felt coats, vests. Down and synthetic fill on request, DWR finishes.</p>
+          <dl>
+            <dt>Monthly capacity</dt><dd>60,000 pcs</dd>
+            <dt>MOQ</dt><dd>800 pcs / style</dd>
+            <dt>Season</dt><dd>Autumn / Winter programmes</dd>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="card-hd"><span>Pl. IV · Kids &amp; sport</span><b>Kidswear &amp; sportswear</b></div>
+          <div class="shot" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_kid.ef469fe.png')"></div>
+          <h3>Full kids range and <em>sportswear.</em></h3>
+          <p>Full kids range ages 2–14 to CPSIA and EN 14682. FOB sportswear manufacturer Vietnam with AQL inspection — team uniforms, activewear, uniform programmes.</p>
+          <dl>
+            <dt>Monthly capacity</dt><dd>90,000 pcs</dd>
+            <dt>Compliance</dt><dd>CPSIA · EN 14682<small>drawstring rules applied at sampling</small></dd>
+            <dt>MOQ</dt><dd>1,000 pcs / style</dd>
+          </dl>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="band mats" id="materials">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker" style="margin-bottom:16px">Materials &amp; mills</div>
+          <h2>Fabrics from mills we've <em>audited ourselves.</em></h2>
+        </div>
+        <p>Nominated mills for the buyer who has one. Approved mills for the buyer who doesn't. Nothing left to a middleman — sourcing is part of the merchandising conversation, not a separate transaction.</p>
+      </div>
+
+      <div class="strip">
+        <div class="swatch">
+          <div class="shot" style="background:linear-gradient(135deg,#E8DCC5 25%,#DCCFB5 25%,#DCCFB5 50%,#E8DCC5 50%,#E8DCC5 75%,#DCCFB5 75%); background-size:14px 14px"></div>
+          <div class="body">
+            <span class="n">M / 01</span>
+            <h4>Cotton &amp; blends</h4>
+            <p>Jersey, CVC, rib, French terry. Nominated cotton on request; approved mills in Nam Dinh &amp; Hung Yen.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="shot" style="background:repeating-linear-gradient(90deg,#D8CFBB 0 2px,#C5BAA2 2px 4px,#D8CFBB 4px 6px)"></div>
+          <div class="body">
+            <span class="n">M / 02</span>
+            <h4>Woven &amp; shirting</h4>
+            <p>Poplin, oxford, twill, viscose and linen blends. GOTS-certified cottons on request.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="shot" style="background:repeating-linear-gradient(45deg,#4A5F70 0 6px,#3E5262 6px 12px)"></div>
+          <div class="body">
+            <span class="n">M / 03</span>
+            <h4>Outerwear shells</h4>
+            <p>Nylon and poly ripstop, softshell, down-proof lining. DWR and taped-seam finishing in-house.</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="shot" style="background:radial-gradient(circle at 30% 30%,#B7532F 3px,transparent 3px), radial-gradient(circle at 70% 70%,#B7532F 3px,transparent 3px), #EFE9D8; background-size:14px 14px"></div>
+          <div class="body">
+            <span class="n">M / 04</span>
+            <h4>Trims &amp; finishing</h4>
+            <p>YKK zippers, custom labels, hangtags. Retail-ready packing to your carton specification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="figures">
+    <div class="wrap">
+      <div class="kicker">By the numbers</div>
+      <div class="figures-grid">
+        <div class="fig">
+          <b>2014</b>
+          <div class="sub">Founded in Gia Lam, Hanoi.</div>
+        </div>
+        <div class="fig">
+          <b>6M<sup>pcs</sup></b>
+          <div class="sub">A year across knit, woven and outerwear.</div>
+        </div>
+        <div class="fig">
+          <b>20<sup>+ factories</sup></b>
+          <div class="sub">Audited partner factories in five Northern provinces.</div>
+        </div>
+        <div class="fig">
+          <b>100<sup>% AQL</sup></b>
+          <div class="sub">Individually inspected before packing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOB LANES -->
+  <section class="band lanes" id="lanes">
+    <div class="wrap">
+      <div class="head">
+        <h2>FOB Hai Phong — <em>lanes we sail.</em></h2>
+        <p>Transit times typical for direct sea freight in normal conditions; peak season and canal congestion add 5–10 days. Your forwarder confirms the exact schedule at booking.</p>
+      </div>
+
+      <div class="board">
+        <div class="row hd"><span>Code</span><span>Destination</span><span>Transit</span><span>Frequency</span><span style="text-align:right">Days</span></div>
+        <div class="row"><span class="code">LAX</span><span class="place">Los Angeles, USA<small>Direct via Trans-Pacific</small></span><span class="via">Direct</span><span class="freq">Weekly</span><span class="days">25–35</span></div>
+        <div class="row"><span class="code">LGB</span><span class="place">Long Beach, USA<small>Direct via Trans-Pacific</small></span><span class="via">Direct</span><span class="freq">Weekly</span><span class="days">25–35</span></div>
+        <div class="row"><span class="code">NYC</span><span class="place">New York / New Jersey<small>Via Panama Canal</small></span><span class="via">1 transit</span><span class="freq">Bi-weekly</span><span class="days">35–45</span></div>
+        <div class="row"><span class="code">YVR</span><span class="place">Vancouver, Canada<small>Trans-Pacific</small></span><span class="via">Direct</span><span class="freq">Weekly</span><span class="days">20–25</span></div>
+        <div class="row"><span class="code">RTM</span><span class="place">Rotterdam, Netherlands<small>Via Singapore / Suez</small></span><span class="via">Transhipment</span><span class="freq">Weekly</span><span class="days">35–40</span></div>
+        <div class="row"><span class="code">HAM</span><span class="place">Hamburg, Germany<small>Via Singapore / Suez</small></span><span class="via">Transhipment</span><span class="freq">Weekly</span><span class="days">35–40</span></div>
+        <div class="row"><span class="code">PUS</span><span class="place">Busan, South Korea<small>Direct</small></span><span class="via">Direct</span><span class="freq">Twice weekly</span><span class="days">5–7</span></div>
+        <div class="foot">Air freight quoted from Noi Bai (HAN) on request.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients-band">
+    <div class="wrap">
+      <div class="kicker">Produced, packed and shipped for</div>
+      <ul>
+        <li>Calvin Klein</li>
+        <li>Tommy Hilfiger</li>
+        <li>DKNY</li>
+        <li>Karl Lagerfeld</li>
+        <li>Guess</li>
+        <li>Huckberry</li>
+        <li>CJ Home Shopping</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final" id="quote">
+    <div class="wrap">
+      <div class="kicker">Start a programme</div>
+      <h2>Send a <em>tech pack.</em> We'll come back with a plan.</h2>
+      <p>PDF, Illustrator, Excel or photos of a reference garment. A merchandiser replies within one working day with open questions and a full FOB costing within five.</p>
+      <div class="row">
+        <a class="btn rust" href="mailto:info@wiser.vn?subject=Tech%20pack%20—%20FOB%20Hai%20Phong">Email a tech pack</a>
+        <a class="btn ghost" href="#">Book a call</a>
+      </div>
+      <div class="contact">
+        <div><b>Email</b><a href="mailto:info@wiser.vn">info@wiser.vn</a><br>helen@wiser.vn</div>
+        <div><b>Phone &amp; WhatsApp</b><a href="tel:+84974806625">+84 974 806 625</a><br>Mon–Sat · GMT+7</div>
+        <div><b>Office</b>Wiser Max HN Co., Ltd<br>Trau Quy · Gia Lam · Hanoi</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Wiser Max HN Company Limited · Registered in Hanoi, Vietnam</span>
+    <ul>
+      <li><a href="#specimens">Capabilities</a></li>
+      <li><a href="#materials">Materials</a></li>
+      <li><a href="#lanes">FOB</a></li>
+      <li><a href="#quote">Quote</a></li>
+    </ul>
+    <span>Made in Hanoi · Shipped FOB Hai Phong</span>
+  </div>
+</footer>
+
+</body>
+</html>

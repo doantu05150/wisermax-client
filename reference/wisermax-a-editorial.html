@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WISERMAX HN — Apparel manufacturer &amp; OEM/ODM partner in Vietnam</title>
+<meta name="description" content="Garment manufacturing from Hanoi for US and EU brands. Knit, woven, outerwear and kidswear — 600,000 pieces a month, AQL-inspected, shipped on time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFAF7;      /* bleached cotton */
+    --muslin:#EFEBE3;     /* raw, undyed */
+    --thread:#8B8F8A;     /* grey thread */
+    --ink:#1B1E23;        /* deep ink */
+    --indigo:#22385C;     /* rope-dyed denim */
+    --selvedge:#C1352E;   /* the red selvedge line */
+    --rule:#D9D4C9;
+
+    --f: "Archivo", system-ui, sans-serif;
+    --maxw: 1320px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--f); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block; max-width:100%}
+  a{color:inherit; text-decoration:none}
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--selvedge); outline-offset:3px;
+  }
+
+  /* the selvedge line — one red thread down the left edge of every band */
+  .band{
+    position:relative;
+    padding: clamp(64px, 9vw, 128px) 0;
+    border-top:1px solid var(--rule);
+  }
+  .band::before{
+    content:""; position:absolute; left:calc(var(--gutter) - 10px); top:0; bottom:0;
+    width:2px; background:var(--selvedge); opacity:.9;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--gutter)}
+
+  /* type scale */
+  .display{
+    font-weight:500; font-stretch:78%;
+    font-size:clamp(44px, 7.2vw, 108px); line-height:.94; letter-spacing:-.025em;
+    margin:0;
+  }
+  h2{
+    font-weight:500; font-stretch:82%;
+    font-size:clamp(32px, 4.2vw, 60px); line-height:1.02; letter-spacing:-.02em; margin:0 0 28px;
+  }
+  h3{font-weight:600; font-size:20px; line-height:1.25; margin:0 0 8px}
+  .lede{font-size:clamp(18px, 1.5vw, 21px); line-height:1.45; max-width:34em; color:#3a3e44; margin:0}
+  .small{font-size:14px; color:var(--thread)}
+  .wide{font-stretch:112%; font-weight:600; letter-spacing:.01em}
+
+  /* nav */
+  header{
+    position:sticky; top:0; z-index:20; background:rgba(251,250,247,.86); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:68px}
+  .logo{display:flex; align-items:baseline; gap:10px}
+  .logo b{font-weight:800; font-stretch:112%; letter-spacing:.06em; font-size:17px}
+  .logo span{color:var(--thread); font-size:13px}
+  .nav ul{display:flex; gap:32px; list-style:none; margin:0; padding:0}
+  .nav li a{font-size:15px; color:#3a3e44; padding:6px 0; border-bottom:1px solid transparent}
+  .nav li a:hover{border-bottom-color:var(--ink); color:var(--ink)}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:14px 22px; border-radius:2px;
+    background:var(--indigo); color:#fff; font-weight:600; font-size:15px; border:1px solid var(--indigo);
+    transition:background .15s;
+  }
+  .btn:hover{background:#1a2c4a}
+  .btn.ghost{background:transparent; color:var(--ink); border-color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink); color:#fff}
+  .btn.sm{padding:10px 16px; font-size:14px}
+  .burger{display:none}
+
+  /* hero */
+  .hero{border-top:0; padding-top:clamp(56px,7vw,104px)}
+  .hero-grid{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(300px,.85fr); gap:clamp(40px,6vw,96px); align-items:end}
+  .hero .display{max-width:15ch}
+  .hero .lede{margin-top:28px}
+  .hero-cta{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap}
+
+  /* spec sheet */
+  .spec{
+    border-top:2px solid var(--ink);
+  }
+  .spec-row{
+    display:grid; grid-template-columns:1fr auto; gap:24px; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--rule);
+  }
+  .spec-row dt{color:#5a5f66; font-size:15px; margin:0}
+  .spec-row dd{margin:0; font-weight:600; font-stretch:88%; font-size:clamp(20px,1.8vw,26px); letter-spacing:-.01em; text-align:right; white-space:nowrap}
+  .spec-row dd small{font-weight:400; font-size:14px; color:var(--thread); margin-left:6px; letter-spacing:0}
+  .spec-foot{padding-top:14px; font-size:13px; color:var(--thread)}
+
+  /* hero image strip */
+  .hero-visual{
+    margin-top:clamp(56px,7vw,96px);
+    display:grid; grid-template-columns:2fr 1fr; gap:10px; height:clamp(320px,46vw,620px);
+  }
+  .ph{
+    position:relative; overflow:hidden; background:var(--muslin);
+    background-size:cover; background-position:center;
+  }
+  .ph::after{
+    /* a twill weave, so empty panels still read as fabric */
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:repeating-linear-gradient(135deg, rgba(27,30,35,.045) 0 2px, transparent 2px 6px);
+  }
+  .ph[style*="background-image"]::after{display:none}
+  .ph.dark{background-color:var(--indigo)}
+  .ph.dark::after{background:repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 2px, transparent 2px 6px)}
+  .ph .cap{
+    position:absolute; left:18px; bottom:16px; z-index:1; font-size:13px; color:#fff;
+    background:rgba(27,30,35,.7); padding:6px 10px; border-radius:2px;
+  }
+  .hero-visual .col{display:grid; grid-template-rows:1fr 1fr; gap:10px}
+
+  /* clients */
+  .clients{padding:40px 0 44px}
+  .clients .wrap{display:flex; align-items:center; gap:24px 56px; flex-wrap:wrap}
+  .clients p{margin:0; font-size:14px; color:var(--thread); flex:0 0 auto}
+  .clients ul{display:flex; gap:40px; flex-wrap:wrap; list-style:none; margin:0; padding:0}
+  .clients li{font-weight:600; font-stretch:105%; letter-spacing:.06em; text-transform:uppercase; font-size:14px; color:#4a4f56}
+
+  /* two-column intro */
+  .split{display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(40px,6vw,96px); align-items:start}
+  .split .lede{max-width:none}
+
+  /* capability list — a ruled list, not cards */
+  .list{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink)}
+  .list li{
+    display:grid; grid-template-columns:minmax(200px,.6fr) 1fr auto; gap:24px; align-items:baseline;
+    padding:22px 0; border-bottom:1px solid var(--rule);
+  }
+  .list li strong{font-weight:600; font-size:20px; font-stretch:90%}
+  .list li p{margin:0; color:#3a3e44}
+  .list li span{font-size:14px; color:var(--thread); white-space:nowrap}
+  .list.two li{grid-template-columns:minmax(160px,.45fr) 1fr}
+
+  /* process — a real sequence, so it gets numbers */
+  .steps{display:grid; grid-template-columns:repeat(5,1fr); gap:0; border-top:2px solid var(--ink); margin-top:8px}
+  .step{padding:26px 28px 0 0; border-right:1px solid var(--rule); margin-right:28px; position:relative}
+  .step:last-child{border-right:0; margin-right:0}
+  .step .n{font-stretch:120%; font-weight:700; font-size:13px; letter-spacing:.08em; color:var(--selvedge)}
+  .step h3{margin-top:14px}
+  .step p{margin:0; color:#3a3e44; font-size:15px}
+  .step .t{margin-top:18px; font-size:14px; color:var(--thread)}
+
+  /* products */
+  .products{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+  .product .ph{height:clamp(260px,26vw,420px)}
+  .product h3{margin:16px 0 4px}
+  .product p{margin:0; color:#3a3e44; font-size:15px}
+  .product .go{display:inline-block; margin-top:12px; font-size:14px; border-bottom:1px solid var(--ink); padding-bottom:2px}
+
+  /* quality band on indigo */
+  .quality{background:var(--indigo); color:#fff; border-top:0}
+  .quality::before{background:#fff; opacity:.5}
+  .quality h2{color:#fff}
+  .quality .lede{color:rgba(255,255,255,.78)}
+  .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:56px; border-top:1px solid rgba(255,255,255,.28)}
+  .fact{padding:28px 28px 28px 0; border-right:1px solid rgba(255,255,255,.28); margin-right:28px}
+  .fact:last-child{border-right:0; margin-right:0}
+  .fact b{display:block; font-weight:500; font-stretch:80%; font-size:clamp(40px,4.4vw,68px); line-height:1; letter-spacing:-.02em}
+  .fact span{display:block; margin-top:10px; color:rgba(255,255,255,.78); font-size:15px}
+  .quality .small{color:rgba(255,255,255,.55); margin-top:28px}
+
+  /* factory network */
+  .network .split{align-items:center}
+  .network .ph{height:clamp(300px,36vw,520px)}
+
+  /* RFQ */
+  .rfq .split{align-items:start}
+  form{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  label{display:grid; gap:6px; font-size:14px; color:#3a3e44}
+  label.full{grid-column:1/-1}
+  input, textarea{
+    font:inherit; font-size:15px; padding:13px 14px; border:1px solid var(--rule); background:#fff; border-radius:2px; color:var(--ink);
+  }
+  textarea{min-height:120px; resize:vertical}
+  .upload{
+    grid-column:1/-1; border:1px dashed #b9b3a6; padding:22px; text-align:center; color:#3a3e44; font-size:15px; border-radius:2px; background:#fff;
+  }
+  .upload b{font-weight:600}
+  form .btn{grid-column:1/-1; justify-self:start; margin-top:6px}
+  .rfq .direct{margin-top:40px; border-top:1px solid var(--rule); padding-top:24px; font-size:15px; color:#3a3e44}
+  .rfq .direct a{border-bottom:1px solid var(--ink)}
+
+  /* footer */
+  footer{border-top:1px solid var(--rule); padding:56px 0 40px; font-size:14px; color:#3a3e44}
+  .foot{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px}
+  .foot ul{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+  .foot .copy{margin-top:48px; display:flex; justify-content:space-between; gap:20px; color:var(--thread); font-size:13px; flex-wrap:wrap}
+
+  /* hero entrance — the only non-user motion on the page */
+  .reveal{opacity:0; transform:translateY(18px); animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .reveal:nth-child(2){animation-delay:.12s}
+  .reveal:nth-child(3){animation-delay:.24s}
+  .spec-row{opacity:0; animation:up .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .spec-row:nth-child(1){animation-delay:.35s}
+  .spec-row:nth-child(2){animation-delay:.45s}
+  .spec-row:nth-child(3){animation-delay:.55s}
+  .spec-row:nth-child(4){animation-delay:.65s}
+  .spec-row:nth-child(5){animation-delay:.75s}
+  @keyframes up{to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .spec-row{opacity:1; transform:none; animation:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* responsive */
+  @media (max-width: 1024px){
+    .steps{grid-template-columns:repeat(3,1fr)}
+    .step:nth-child(3){border-right:0}
+    .step:nth-child(n+4){border-top:1px solid var(--rule); margin-top:28px}
+    .products{grid-template-columns:repeat(2,1fr)}
+    .foot{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 820px){
+    .nav ul, .nav .btn{display:none}
+    .burger{display:inline-flex; background:none; border:1px solid var(--ink); border-radius:2px; padding:8px 12px; font:inherit; font-size:14px}
+    .hero-grid, .split{grid-template-columns:1fr}
+    .hero-visual{grid-template-columns:1fr; height:auto}
+    .hero-visual .ph{height:260px}
+    .hero-visual .col{grid-template-rows:none; grid-template-columns:1fr 1fr}
+    .list li{grid-template-columns:1fr; gap:6px}
+    .steps{grid-template-columns:1fr}
+    .step{border-right:0; margin-right:0; padding-right:0}
+    .step:nth-child(n+2){border-top:1px solid var(--rule); margin-top:24px}
+    .facts{grid-template-columns:1fr}
+    .fact{border-right:0; margin-right:0; border-bottom:1px solid rgba(255,255,255,.28)}
+    .fact:last-child{border-bottom:0}
+    form{grid-template-columns:1fr}
+    label.full{grid-column:auto}
+    .upload, form .btn{grid-column:auto}
+    .foot{grid-template-columns:1fr}
+  }
+  @media (max-width: 480px){
+    .products{grid-template-columns:1fr}
+    .hero-visual .col{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="WISERMAX HN home">
+      <b>WISERMAX</b><span>Hanoi, Vietnam</span>
+    </a>
+    <ul>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#quality">Quality</a></li>
+      <li><a href="#factory">Factory</a></li>
+    </ul>
+    <a class="btn sm" href="#rfq">Request a quote</a>
+    <button class="burger" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="band hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1 class="display reveal">Apparel manufacturing in Vietnam for brands that ship to the US and Europe.</h1>
+          <p class="lede reveal">Knit, woven, outerwear and kidswear, produced across our network of partner factories in Northern and Central Vietnam. Send us a tech pack and we come back with a costed sample plan within five working days.</p>
+          <div class="hero-cta reveal">
+            <a class="btn" href="#rfq">Send a tech pack</a>
+            <a class="btn ghost" href="#capabilities">See capabilities</a>
+          </div>
+        </div>
+
+        <dl class="spec" aria-label="Factory at a glance">
+          <div class="spec-row"><dt>Monthly capacity</dt><dd>600,000 <small>pcs</small></dd></div>
+          <div class="spec-row"><dt>Bulk lead time</dt><dd>45–60 <small>days</small></dd></div>
+          <div class="spec-row"><dt>Minimum order</dt><dd>500 <small>pcs / style</small></dd></div>
+          <div class="spec-row"><dt>Inspection standard</dt><dd>AQL 1.0 – 2.5</dd></div>
+          <div class="spec-row"><dt>Shipping to</dt><dd>US · Canada · EU · Korea</dd></div>
+          <p class="spec-foot">Figures are typical for FOB Hai Phong orders. Lead time excludes fabric development.</p>
+        </dl>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ph" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/service-1.b4ee9f7.jpg')"><span class="cap">Sewing line, partner factory, Nam Dinh</span></div>
+        <div class="col">
+          <div class="ph" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/so-sampleroom.d19d16b.jpg')"><span class="cap">Sample room</span></div>
+          <div class="ph dark" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/so-design.0240ea0.jpg')"><span class="cap">Pattern &amp; design</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients">
+    <div class="wrap">
+      <p>Produced for</p>
+      <ul>
+        <li>Calvin Klein</li><li>Tommy Hilfiger</li><li>DKNY</li><li>Karl Lagerfeld</li><li>Guess</li><li>Huckberry</li><li>CJ Home Shopping</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="band" id="capabilities">
+    <div class="wrap split">
+      <div>
+        <h2>What we make</h2>
+        <p class="lede">One point of contact from first sketch to shipped carton. We handle sourcing, sampling, bulk production and packing so your team works with one vendor, not six.</p>
+      </div>
+      <ul class="list">
+        <li><strong>Knitwear</strong><p>T-shirts, polos, fleece, sweatshirts, loungewear. Cotton, cotton-poly, French terry, rib.</p><span>Cut &amp; sew</span></li>
+        <li><strong>Woven</strong><p>Shirts, blouses, dresses, chinos, shorts. Poplin, twill, linen blends, viscose.</p><span>Cut &amp; sew</span></li>
+        <li><strong>Outerwear</strong><p>Padded jackets, wool and felt coats, vests. Down and synthetic fill, dry-clean finishes.</p><span>Seasonal</span></li>
+        <li><strong>Kidswear</strong><p>Full range for 2–14 years, produced to CPSIA and EN 14682 drawstring requirements.</p><span>Compliance-checked</span></li>
+        <li><strong>Protective &amp; workwear</strong><p>Hi-vis, coveralls and uniform programs with reinforced construction.</p><span>Program orders</span></li>
+        <li><strong>Accessories</strong><p>Socks, underwear and basics through certified partner mills.</p><span>Partner mills</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="band" id="process">
+    <div class="wrap">
+      <h2>How an order moves</h2>
+      <p class="lede">Every order follows the same five stages. You get a named merchandiser and a shared timeline from day one.</p>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3>Tech pack review</h3><p>We check construction, measurements and fabric spec, then return a costing and open questions.</p><div class="t">3–5 days</div></div>
+        <div class="step"><div class="n">02</div><h3>Sampling</h3><p>Proto, fit and pre-production samples from our in-house sample room. Fabric sourced from approved mills.</p><div class="t">2–3 weeks</div></div>
+        <div class="step"><div class="n">03</div><h3>Bulk production</h3><p>Allocated to the partner factory best suited to the product. Weekly progress photos and line reports.</p><div class="t">30–45 days</div></div>
+        <div class="step"><div class="n">04</div><h3>Inspection</h3><p>Inline and final inspection to AQL 1.0 or 2.5. Third-party inspection welcome.</p><div class="t">2–3 days</div></div>
+        <div class="step"><div class="n">05</div><h3>Packing &amp; shipping</h3><p>Packed to your carton and labelling spec. FOB Hai Phong or door-to-door via forwarder.</p><div class="t">Sea 25–35 days to US West Coast</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="band" id="products">
+    <div class="wrap">
+      <h2>Recent work</h2>
+      <p class="lede">A selection from the last three seasons.</p>
+      <div class="products" style="margin-top:44px">
+        <div class="product">
+          <div class="ph" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_men.8f5001a.jpeg')"></div>
+          <h3>Men</h3><p>Shirts, tees, chinos, jackets</p><a class="go" href="#">View men's</a>
+        </div>
+        <div class="product">
+          <div class="ph" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_women.34abd18.jpeg')"></div>
+          <h3>Women</h3><p>Dresses, blouses, coats, knits</p><a class="go" href="#">View women's</a>
+        </div>
+        <div class="product">
+          <div class="ph" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_kid.ef469fe.png')"></div>
+          <h3>Kids</h3><p>Ages 2–14, all categories</p><a class="go" href="#">View kids'</a>
+        </div>
+        <div class="product">
+          <div class="ph dark" style="background-image:url('https://www.wisermaxhn.com/_nuxt/img/product_overview_protective.703df30.jpg')"></div>
+          <h3>Protective &amp; accessories</h3><p>Workwear, socks, underwear</p><a class="go" href="#">View range</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY -->
+  <section class="band quality" id="quality">
+    <div class="wrap">
+      <h2>Quality you can audit</h2>
+      <p class="lede">Every piece is checked individually before it goes into the carton. Inspection reports, fabric test results and factory audit documents are shared with your team, not kept in a drawer.</p>
+      <div class="facts">
+        <div class="fact"><b>100%</b><span>of pieces inspected one by one before packing</span></div>
+        <div class="fact"><b>AQL 1.0</b><span>standard for premium programs, 2.5 for basics</span></div>
+        <div class="fact"><b>12 yrs</b><span>producing for US and Canadian labels</span></div>
+      </div>
+      <p class="small">Social compliance and chemical certifications (e.g. BSCI, WRAP, OEKO-TEX) are listed per partner factory and available on request. [Confirm which certificates to display.]</p>
+    </div>
+  </section>
+
+  <!-- FACTORY NETWORK -->
+  <section class="band network" id="factory">
+    <div class="wrap split">
+      <div class="ph dark"><span class="cap">Factory network photo — to be shot (drone / wide shot of a partner factory)</span></div>
+      <div>
+        <h2>One office in Hanoi. Twenty factories behind it.</h2>
+        <p class="lede">WISERMAX runs merchandising, design and quality control from Gia Lam, Hanoi, and places production across more than twenty vetted partner factories in Northern and Central Vietnam. That is how we keep capacity flexible — six million pieces a year — without locking you into one line's schedule.</p>
+        <ul class="list two" style="margin-top:36px">
+          <li><strong>Founded</strong><p>2014, Hanoi</p></li>
+          <li><strong>Annual output</strong><p>6,000,000+ pieces across knit, woven and outerwear</p></li>
+          <li><strong>Main markets</strong><p>United States, Canada, European Union, South Korea</p></li>
+          <li><strong>Working hours</strong><p>Overlap with US East Coast mornings and all EU business hours</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RFQ -->
+  <section class="band rfq" id="rfq">
+    <div class="wrap split">
+      <div>
+        <h2>Send us your tech pack</h2>
+        <p class="lede">Attach a tech pack, sketch or reference garment. A merchandiser replies within one working day with questions or a costing timeline.</p>
+        <div class="direct">
+          <p style="margin:0 0 8px">Prefer email? <a href="mailto:info@wiser.vn">info@wiser.vn</a></p>
+          <p style="margin:0 0 8px">WhatsApp / phone: <a href="tel:+84974806625">+84 974 806 625</a></p>
+          <p style="margin:0">Wiser Max HN Company Limited, Trau Quy Ward, Gia Lam District, Hanoi, Vietnam</p>
+        </div>
+      </div>
+      <form onsubmit="return false">
+        <label>Name<input type="text" name="name" autocomplete="name"></label>
+        <label>Company<input type="text" name="company" autocomplete="organization"></label>
+        <label>Work email<input type="email" name="email" autocomplete="email"></label>
+        <label>Estimated quantity<input type="text" name="qty" placeholder="e.g. 3,000 pcs / 4 styles"></label>
+        <label class="full">Tell us about the program<textarea name="msg" placeholder="Category, fabric, target FOB, delivery window…"></textarea></label>
+        <div class="upload"><b>Drop files here</b> or click to attach — PDF, AI, XLSX, images up to 25 MB</div>
+        <button class="btn" type="submit">Send tech pack</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo" style="margin-bottom:14px"><b>WISERMAX</b><span>Hanoi, Vietnam</span></div>
+        <p style="margin:0; max-width:32em">Apparel manufacturer and OEM/ODM partner. Producing for US, Canadian, European and Korean labels since 2014.</p>
+      </div>
+      <ul>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#process">How we work</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+      <ul>
+        <li><a href="#quality">Quality &amp; compliance</a></li>
+        <li><a href="#factory">Factory network</a></li>
+        <li><a href="#rfq">Request a quote</a></li>
+      </ul>
+      <ul>
+        <li><a href="mailto:info@wiser.vn">info@wiser.vn</a></li>
+        <li><a href="tel:+84974806625">+84 974 806 625</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>© 2026 Wiser Max HN Company Limited</span>
+      <span>Trau Quy, Gia Lam, Hanoi · Tax code available on request</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

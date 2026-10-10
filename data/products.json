@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Coats D",
+    "key": "coats-d",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Green",
+        "color": "#41571d",
+        "url": "coats-d-1_green.jpg"
+      },
+      {
+        "name": "Gray",
+        "color": "#c7c7c7",
+        "url": "coats-d-2_gray.jpg"
+      },
+      {
+        "name": null,
+        "color": null,
+        "url": "coats-d.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Coats T",
+    "key": "coats-t",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Gray",
+        "color": "#c7c7c7",
+        "url": "coats-t-1_gray.jpg"
+      },
+      {
+        "name": "Black",
+        "color": "#000",
+        "url": "coats-t-2_black.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Jacket Q",
+    "key": "Jacket-q",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Gray",
+        "color": "#c7c7c7",
+        "url": "jacket-q-1_gray.jpg"
+      },
+      {
+        "name": "Black",
+        "color": "#000",
+        "url": "jacket-q-2_black.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Jacket C",
+    "key": "jacket-c",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Black",
+        "color": "#000",
+        "url": "jacket-c_black.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Jacket W",
+    "key": "jacket-w",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Green",
+        "color": "#41571d",
+        "url": "jacket-w.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Coats Spot",
+    "key": "coats-spot",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "White",
+        "color": "#fff",
+        "url": "coats-spot-1_white.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Coats E",
+    "key": "coats-e",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Gray",
+        "color": "#c7c7c7",
+        "url": "coats-e-1_gray.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Polo mata",
+    "key": "polo-mata",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Blue",
+        "color": "#0c4a6e",
+        "url": "polo-mata-1_blue.jpg"
+      },
+      {
+        "name": "Cyan",
+        "color": "#0891b2",
+        "url": "polo-mata-2_gray.jpg"
+      },
+      {
+        "name": "Rose",
+        "color": "#881337",
+        "url": "polo-mata-3_rpse.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Tee K",
+    "key": "tee-k",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Blue",
+        "color": "#0c4a6e",
+        "url": "tee-k-1_blue.jpg"
+      },
+      {
+        "name": "Yellow",
+        "color": "#fbbf24",
+        "url": "tee-k-2_yellow.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Polo T",
+    "key": "polo-t",
+    "category": "menswear",
+    "images": [
+      {
+        "name": "Green",
+        "color": "#41571d",
+        "url": "polo-t-1_green.png"
+      },
+      {
+        "name": "Light Orange",
+        "color": "#fed7aa",
+        "url": "polo-t-2_brown.png"
+      }
+    ]
+  }
+]

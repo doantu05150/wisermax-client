@@ -1,0 +1,51 @@
+{
+  "slug": "men",
+  "kicker": "Menswear · Pl. II · III",
+  "title": "Men's",
+  "titleAccent": "programme",
+  "titleSuffix": ".",
+  "lede": "Custom t-shirt factory Vietnam and bulk polo shirt manufacturer for retail chains and DTC labels. Woven pants supplier for chinos, shorts and shirting. Padded and waterproof outerwear on request.",
+  "hero": "/products/men/banner_top.png",
+  "heroAlt": "Menswear atelier — Vietnam garment manufacturer for polos, shirts, suits and outerwear",
+  "specs": [
+    { "term": "Categories",     "value": "T-shirts · Polos · Shirting · Suits · Trousers · Outerwear · Underwear · Socks" },
+    { "term": "Typical fabrics","value": "Cotton jersey · Piqué · Poplin · Oxford · Twill · Wool blends" },
+    { "term": "Monthly capacity","value": "Up to 300,000 pcs across knit and woven combined" },
+    { "term": "MOQ",            "value": "500 pcs / style · colour splits from 200" }
+  ],
+  "features": [
+    {
+      "code": "P / 01",
+      "title": "Polo shirt manufacturer",
+      "description": "Bulk polo shirt manufacturer using piqué cotton and CVC blends. Yarn-dye stripes, tipped collars, embroidered branding — sampled in our own room in Hanoi.",
+      "images": [
+        { "src": "/products/men/polo_1.1.jpeg", "alt": "Custom piqué polo shirt — bulk polo shirt manufacturer Vietnam" },
+        { "src": "/products/men/polo_1.2.jpeg", "alt": "Yarn-dye tipped polo shirt — Vietnam garment factory sample" }
+      ]
+    },
+    {
+      "code": "P / 02",
+      "title": "Shirting & business wear",
+      "description": "Cut and sew woven shirting from poplin, oxford and twill. Casual and formal patterns for retail programmes and made-to-measure runs.",
+      "images": [
+        { "src": "/products/men/banner_shirt.png", "alt": "Men's woven shirt programme — Vietnam apparel manufacturer" }
+      ]
+    },
+    {
+      "code": "P / 03",
+      "title": "Tailored suits & vests",
+      "description": "Made from high-quality imported fabric with clean tailoring, structured shoulders and hand-finished details for retail suiting programmes.",
+      "images": [
+        { "src": "/products/men/vest_1.png", "alt": "Men's tailored vest — Vietnam garment factory for suiting programmes" }
+      ]
+    }
+  ],
+  "more": [
+    { "img": "/products/men/ao_gio.jpeg",   "name": "Wind coats" },
+    { "img": "/products/men/ao_len.jpeg",   "name": "Knit sweaters" },
+    { "img": "/products/men/ao-thun.jpeg",  "name": "T-shirts" },
+    { "img": "/products/men/shirt_short.jpeg", "name": "Short-sleeved shirts" },
+    { "img": "/products/men/quan-kaki.jpeg","name": "Khaki chinos" },
+    { "img": "/products/men/quan-lot-nam.png","name": "Underwear" }
+  ]
+}
